@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>寻Nian</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">寻Nian</a>
+    <ul>
+      <li><a href="#" class="active">主页</a></li>
+      <li><a href="./dengluzhuce/dengru.html">登录</a></li>
+    </ul>
+  </header>
+  <section>
+    <img src="images/stars.png" id="stars">
+    <img src="images/moon.png" id="moon">
+    <img src="images/mountains_behind.png" id="mountains_behind">
+    <h2 id="text">寻找平静</h2>
+    <a href="#sec" id="btn">关于我们</a>
+    <img src="images/mountains_front.png" id="mountains_front">
+  </section>
+  <div class="sec" id="sec">
+    <h2>Parallax Scrolling Effects</h2>
+    <p>(内容随意发挥)Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.<br><br>Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.<br><br>Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.<br><br>Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.<br><br>Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.<br><br>Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.</p>
+  </div>
+  <div class="sec"> 
+      <div class="wrap">
+        <ul>
+            <li><a href="./video.html" class="active2">视频引导</a></li>
+            <li><a href="https://search.bilibili.com/all?keyword=python%E5%88%B6%E4%BD%9C%E7%BD%91%E9%A1%B5&from_source=webtop_search&spm_id_from=333.1007&search_source=5" class="active2">情绪笔记</a></li>
+        </ul>
+      </div>    
+  </div>
+
+  <script>
+    let stars = document.getElementById('stars')
+    let moon = document.getElementById('moon')
+    let mountains_behind = document.getElementById('mountains_behind')
+    let text = document.getElementById('text')
+    let btn = document.getElementById('btn')
+    let mountains_front = document.getElementById('mountains_front')
+    let header = document.querySelector('header')
+
+    window.addEventListener('scroll', function(){
+      let value = window.scrollY;
+      stars.style.left = value * 0.25 + 'px'
+      moon.style.top = value * 1.05 + 'px'
+      mountains_behind.style.top = value * 0.5 + 'px'
+      mountains_front.style.top = value * 0 + 'px'
+      text.style.marginRight = value * 4 + 'px'
+      text.style.marginTop = value * 1.5 + 'px'
+      btn.style.marginTop = value * 1.5 + 'px'
+      header.style.top = value * 0.5 + 'px'
+    })
+  </script>
+</body>
+</html>
